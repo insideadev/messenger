@@ -6,6 +6,7 @@ package com.epam.ld.module2.testing;
 public class Client {
     private String addresses;
     private String email;
+    private String message;
 
     /**
      * Gets addresses.
@@ -31,5 +32,13 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
