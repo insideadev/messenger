@@ -1,7 +1,6 @@
 package com.epam.ld.module2.testing;
 
 
-import com.epam.ld.module2.testing.template.Template;
 import com.epam.ld.module2.testing.template.TemplateEngine;
 
 /**
@@ -27,11 +26,10 @@ public class Messenger {
      * Send message.
      *
      * @param client   the client
-     * @param template the template
      */
-    public void sendMessage(Client client, Template template) {
+    public void sendMessage(Client client) {
         String messageContent =
-            templateEngine.generateMessage(template, client);
+            templateEngine.generateMessage(client);
         mailServer.send(client.getAddresses(), messageContent);
     }
 }
