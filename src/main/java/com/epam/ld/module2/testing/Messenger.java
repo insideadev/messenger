@@ -1,14 +1,17 @@
 package com.epam.ld.module2.testing;
 
 
+import com.epam.ld.module2.testing.entity.Client;
 import com.epam.ld.module2.testing.template.TemplateEngine;
+
+import java.io.IOException;
 
 /**
  * The type Messenger.
  */
 public class Messenger {
-    private MailServer mailServer;
-    private TemplateEngine templateEngine;
+    private final MailServer mailServer;
+    private final TemplateEngine templateEngine;
 
     /**
      * Instantiates a new Messenger.
@@ -27,7 +30,7 @@ public class Messenger {
      *
      * @param client   the client
      */
-    public void sendMessage(Client client) {
+    public void sendMessage(Client client) throws IOException {
         String messageContent =
             templateEngine.generateMessage(client);
         mailServer.send(client.getAddresses(), messageContent);

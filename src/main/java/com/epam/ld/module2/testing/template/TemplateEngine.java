@@ -1,6 +1,6 @@
 package com.epam.ld.module2.testing.template;
 
-import com.epam.ld.module2.testing.Client;
+import com.epam.ld.module2.testing.entity.Client;
 
 import java.util.Objects;
 
@@ -14,10 +14,10 @@ public class TemplateEngine {
     /**
      * Generate message string.
      *
-     * @param client   the client
+     * @param client the client
      * @return the string
      */
-    public String generateMessage( Client client) {
+    public String generateMessage(Client client) {
         Objects.requireNonNull(client.getMessage());
 
         String[] msg = client.getMessage().split(":");
